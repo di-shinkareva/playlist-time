@@ -58,6 +58,10 @@ def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
 #пример использования функции с плейлистом playlist_c, выбраны 5 песен
 duration_c = get_duration(playlist_c, 5)
 print(f"Общее время звучания 5 случайных песен из playlist_c: {duration_c}")
+#пример использования функции с плейлистом playlist_b, выбраны 3 песни 
+duration_b = get_duration(playlist_b, 3)
+print(f"Общее время звучания 3 случайных песен из playlist_b: {duration_b}")
+
 
 
 
