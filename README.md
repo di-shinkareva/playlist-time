@@ -49,12 +49,16 @@ def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
     elif isinstance(playlist, list): 
     for song in selected_songs:
             duration = playlist_b[song]
-#Преобразование время из float в строку перед разделением
+#преобразование время из float в строку перед разделением
             duration_str = str(duration)
             total_duration += datetime.timedelta(minutes=int(duration_str.split('.')[0]),
                                        seconds=int(duration_str.split('.')[1]))
 
     return total_duration
+#пример использования функции с плейлистом playlist_c, выбраны 5 песен
+duration_c = get_duration(playlist_c, 5)
+print(f"Общее время звучания 5 случайных песен из playlist_c: {duration_c}")
+
 
 
 
