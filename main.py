@@ -29,3 +29,6 @@ playlist_b = {
  'Улетаю': 3.24,
  'Опять метель': 3.37,
  }
+#определение функции для обработки плейлистов
+def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
+    total_duration = datetime.timedelta(seconds=0)
