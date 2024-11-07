@@ -34,3 +34,14 @@ playlist_b = {
  #определение функции для обработки плейлистов
 def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
     total_duration = datetime.timedelta(seconds=0)
+#преобразование словаря в список ключей (названия песен)
+    if isinstance(playlist, dict):
+        playlist = list(playlist.keys())
+
+    selected_songs = random.sample(playlist, n)
+
+    if isinstance(playlist, tuple):
+        for song in selected_songs:
+            duration = datetime.timedelta(minutes=int(song.split(';')[1].strip().split('.')[0]),
+                                       seconds=int(song.split(';')[1].strip().split('.')[1]))
+            total_duration += duration
