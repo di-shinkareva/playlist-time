@@ -45,3 +45,8 @@ def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
             duration = datetime.timedelta(minutes=int(song.split(';')[1].strip().split('.')[0]),
                                        seconds=int(song.split(';')[1].strip().split('.')[1]))
             total_duration += duration
+#проверка,является ли playlist списком
+    elif isinstance(playlist, list): 
+    for song in selected_songs:
+            duration = playlist_b[song]
+
