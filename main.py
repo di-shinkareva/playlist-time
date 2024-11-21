@@ -1,5 +1,5 @@
 # IvanovaShinkarevaplaylist-time
-Ranepa case 2 for playlist task
+#Ranepa case 2 for playlist task
 #импорт модулей 
 import random
 import datetime
@@ -46,8 +46,8 @@ def get_duration(playlist: Iterable, n: int) -> datetime.timedelta:
                                        seconds=int(song.split(';')[1].strip().split('.')[1]))
             total_duration += duration
 #проверка,является ли playlist списком
-    elif isinstance(playlist, list): 
-    for song in selected_songs:
+    elif isinstance(playlist, list):
+      for song in selected_songs:
             duration = playlist_b[song]
 #преобразование время из float в строку перед разделением
             duration_str = str(duration)
